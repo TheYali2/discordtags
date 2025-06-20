@@ -26,7 +26,7 @@ app.get('/api/tags/search', (req, res) => {
     return res.json([]);
   }
   const results = tagsData.filter(entry =>
-    entry.name?.toLowerCase().includes(q)
+    entry.tag?.toLowerCase().includes(q)
   );
   res.json(results);
 });

@@ -14,6 +14,10 @@ try {
   console.error("❌ Failed to load tags.json:", err.message);
 }
 
+app.get('/', (req, res) => {
+  res.send('DiscordTags API is online!');
+});
+
 // API שמחזיר את כל האובייקטים
 app.get('/api/tags', (req, res) => {
   res.json(tagsData);
